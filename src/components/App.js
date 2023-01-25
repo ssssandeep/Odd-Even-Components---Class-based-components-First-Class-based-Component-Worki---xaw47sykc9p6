@@ -24,7 +24,13 @@ class Even extends React.Component {
 }
 class App extends React.Component {
   handleChange(){
+    if(this.state.even){
+      console.log("Even is unmounted");
+    }else{
+      console.log("Odd is unmounted");
+    }
     this.setState({even: !this.state.even})
+    
   }
   constructor(props){
     super(props)
